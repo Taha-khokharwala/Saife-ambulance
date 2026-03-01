@@ -25,18 +25,6 @@ const [deleteKey, setDeleteKey] = useState(null);
 
     fetchData();
   }, []);
-  const handleDelete = async (formNo) => {
-  try {
-    await remove(ref(database, `data/${formNo}`));
-    setData((prev) => {
-      const updated = { ...prev };
-      delete updated[formNo];
-      return updated;
-    });
-  } catch (error) {
-    console.error("Error deleting data:", error);
-  }
-};
 
 const confirmDelete = async () => {
   try {
