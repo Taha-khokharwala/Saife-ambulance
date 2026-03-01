@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #e8f9f1, #d4f5e9);
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.form-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 150, 100, 0.15);
+  width: 500px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1b8a5a;
+  font-weight: 600;
+}
+
+.medical-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cdeee0;
+  background-color: #f6fffb;
+  transition: 0.3s ease;
+  font-size: 14px;
+}
+
+.form-row input:focus {
+  border-color: #1b8a5a;
+  outline: none;
+  box-shadow: 0 0 6px rgba(27, 138, 90, 0.3);
+}
+
+.bmi-field {
+  background-color: #e6f7f0;
+  font-weight: bold;
+}
+
+.submit-btn {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #1b8a5a;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #146c43;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(20, 108, 67, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Custom Alert ===== */
+
+.custom-alert {
+  padding: 12px 18px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.custom-alert.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #2e7d32;
+}
+
+.custom-alert.error {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #c62828;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Overlay Background */
+.confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Popup Box */
+.confirm-box {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  width: 350px;
+  text-align: center;
+  animation: popup 0.3s ease;
+}
+
+/* Animation */
+@keyframes popup {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Buttons Container */
+.confirm-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Cancel Button */
+.cancel-btn {
+  padding: 8px 15px;
+  background-color: #9e9e9e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background-color: #757575;
+}
+
+/* Delete Button */
+.delete-btn {
+  padding: 8px 15px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #b71c1c;
+}
