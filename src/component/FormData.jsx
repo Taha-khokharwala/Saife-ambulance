@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { database } from "../firebase/firebase";
-import { ref, get, remove, update } from "firebase/database";
+import { ref, get, update} from "firebase/database";
 
 const FormData = () => {
   const [data, setData] = useState({});
